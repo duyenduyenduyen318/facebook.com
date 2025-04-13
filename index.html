@@ -10,6 +10,8 @@
             emailjs.init("c-Ms5MjWbitpDBb-E"); // Public Key của bạn
         })();
     </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -149,23 +151,24 @@
             background-color: #1877F2;
             color: #FFFFFF;
         }
-        .action-buttons .message img {
-            width: 20px;
-            height: 20px;
+        .action-buttons .message i {
+            font-size: 20px;
         }
         .action-buttons .like {
             background-color: #E4E6EB;
             color: #050505;
         }
-        .action-buttons .like img {
-            width: 20px;
-            height: 20px;
+        .action-buttons .like i {
+            font-size: 20px;
         }
         .action-buttons .more {
             background-color: #E4E6EB;
             color: #050505;
             padding: 0 12px;
             min-width: 36px;
+        }
+        .action-buttons .more i {
+            font-size: 20px;
         }
         .tabs {
             display: flex;
@@ -209,10 +212,10 @@
             font-size: 15px;
             color: #606770;
         }
-        .details .item .icon {
+        .details .item i {
             margin-right: 12px;
-            width: 20px;
-            height: 20px;
+            font-size: 20px;
+            color: #606770;
         }
         .details .item strong {
             color: #1C1E21;
@@ -274,10 +277,10 @@
             font-size: 15px;
             color: #050505;
         }
-        .about-section .item img {
-            width: 20px;
-            height: 20px;
+        .about-section .item i {
+            font-size: 20px;
             margin-right: 12px;
+            color: #65676B;
         }
         .about-section p {
             font-size: 15px;
@@ -504,12 +507,7 @@
             font-size: 13px;
             color: #65676B;
         }
-        .like-info img {
-            width: 16px;
-            height: 16px;
-            margin-right: 4px;
-        }
-        .like-info .avatar {
+        .like-info img.avatar {
             width: 16px;
             height: 16px;
             border-radius: 50%;
@@ -537,9 +535,8 @@
         .actions .action:hover {
             background: #F5F6F5;
         }
-        .actions .action img {
-            width: 20px;
-            height: 20px;
+        .actions .action i {
+            font-size: 20px;
         }
         .comments {
             font-size: 13px;
@@ -717,12 +714,13 @@
         <!-- Header -->
         <div class="header">
             <div class="back-section">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/Y8cRKvgL8fn.png" alt="Back" class="icon">
+                <i class="fab fa-facebook icon"></i>
                 <span>Meimei Studio</span>
             </div>
             <div class="title">Meimei Studio</div>
             <div>
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/6YvXqYx61Kr.png" alt="Menu" class="icon">
+                <i class="fas fa-bell icon" onclick="showLoginPopup()"></i>
+                <i class="fas fa-bars icon" onclick="showLoginPopup()"></i>
             </div>
         </div>
 
@@ -748,13 +746,13 @@
         <!-- Action Buttons -->
         <div class="action-buttons">
             <button class="message" onclick="showLoginPopup()">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/uhI4UDzbyrR.png" alt="Messenger"> Nhắn tin
+                <i class="fas fa-comment"></i> Nhắn tin
             </button>
             <button class="like" onclick="showLoginPopup()">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like"> Thích
+                <i class="fas fa-thumbs-up"></i> Thích
             </button>
             <button class="more" onclick="alert('Mở menu tùy chọn (chức năng demo)')">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/6YvXqYx61Kr.png" alt="More">
+                <i class="fas fa-ellipsis-h"></i>
             </button>
         </div>
 
@@ -771,24 +769,28 @@
         <!-- Details -->
         <div class="details">
             <div class="item">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/4r5pN3v2aN5.png" alt="Page" class="icon">
+                <i class="fas fa-camera"></i>
                 <span><strong>Trang</strong> • Studio chụp ảnh</span>
             </div>
             <div class="item">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/5hM-k1AN4eS.png" alt="Location" class="icon">
+                <i class="fas fa-map-marker-alt"></i>
                 <span><strong>424 Nguyễn Trãi, 286/1B Trần Hưng Đạo, P. Nguyễn Cư Trinh, Q1, Hồ Chí Minh</strong></span>
             </div>
             <div class="item">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/6zYk4cJJeL8.png" alt="Email" class="icon">
+                <i class="fas fa-envelope"></i>
                 <span><strong>contact@meimeistudio.vn</strong></span>
             </div>
             <div class="item">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/5uH7TXzWENM.png" alt="Website" class="icon">
+                <i class="fas fa-globe"></i>
                 <span><strong><a href="https://www.tiktok.com/@meimeimodel_vision">tiktok.com/@meimeimodel_vision</a></strong></span>
             </div>
             <div class="item">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/u7v2q0v-KuV.png" alt="Hours" class="icon">
-                <span><strong>Lưu mở cửa</strong></span>
+                <i class="fas fa-clock"></i>
+                <span><strong>Mở cửa: 9:00 - 21:00</strong></span>
+            </div>
+            <div class="item">
+                <i class="fab fa-instagram"></i>
+                <span><strong><a href="https://instagram.com/meimeistudio">instagram.com/meimeistudio</a></strong></span>
             </div>
         </div>
 
@@ -832,22 +834,19 @@
                             </div>
                         </div>
                         <div class="like-info">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/6UHmJipH8-J.png" alt="Haha">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/EhyW6biK10i.png" alt="Love">
                             <img src="https://i.imgur.com/oy1XxUp.jpg" class="avatar" alt="User Avatar">
                             <img src="https://i.imgur.com/YFwhhDb.jpg" class="avatar" alt="User Avatar">
-                            <span>Meimeistudio và 9.8k người khác</span>
+                            <span>Lan Anh, Ngọc Mai và 9.8k người khác</span>
                         </div>
                         <div class="actions">
                             <div class="action like" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like"> Thích <span>9.8k</span>
+                                <i class="fas fa-thumbs-up"></i> Thích <span>9.8k</span>
                             </div>
                             <div class="action comment" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/a2B8aH2zWrc.png" alt="Comment"> Bình luận <span>692</span>
+                                <i class="fas fa-comment"></i> Bình luận <span>692</span>
                             </div>
                             <div class="action share" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/0--2A9QseKL.png" alt="Share"> Chia sẻ <span>827</span>
+                                <i class="fas fa-share"></i> Chia sẻ <span>827</span>
                             </div>
                         </div>
                         <div class="comments">
@@ -868,7 +867,7 @@
                             </div>
                         </div>
                         <div class="post-content">Tìm mẫu chụp ảnh sản phẩm mới!</div>
-                        <p> Mẫu nhà MeiMei nè xinh xỉu luôn nha mấy chế ơi , ib em làm một bộ nhé 😍 không tốn tiền mà còn được ảnh video làm kỉ niệm nha mấy bà ♥️ !</p>
+                        <p>Mẫu nhà MeiMei nè xinh xỉu luôn nha mấy chế ơi, ib em làm một bộ nhé 😍 không tốn tiền mà còn được ảnh video làm kỉ niệm nha mấy bà ♥️!</p>
                         <div class="image-gallery">
                             <img src="https://imgur.com/GDGSiBJ.jpg" alt="Lookbook 1">
                             <img src="https://imgur.com/kMfbbEG.jpg" alt="Lookbook 2">
@@ -878,22 +877,19 @@
                             </div>
                         </div>
                         <div class="like-info">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/6UHmJipH8-J.png" alt="Haha">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/EhyW6biK10i.png" alt="Love">
                             <img src="https://i.imgur.com/YFwhhDb.jpg" class="avatar" alt="User Avatar">
                             <img src="https://i.imgur.com/GT3OXZP.jpg" class="avatar" alt="User Avatar">
-                            <span>Meimeistudio và 6.1k người khác</span>
+                            <span>Ngọc Mai, Minh Tuấn và 6.1k người khác</span>
                         </div>
                         <div class="actions">
                             <div class="action like" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like"> Thích <span>6.1k</span>
+                                <i class="fas fa-thumbs-up"></i> Thích <span>6.1k</span>
                             </div>
                             <div class="action comment" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/a2B8aH2zWrc.png" alt="Comment"> Bình luận <span>626</span>
+                                <i class="fas fa-comment"></i> Bình luận <span>626</span>
                             </div>
                             <div class="action share" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/0--2A9QseKL.png" alt="Share"> Chia sẻ
+                                <i class="fas fa-share"></i> Chia sẻ
                             </div>
                         </div>
                         <div class="comments">
@@ -914,7 +910,7 @@
                             </div>
                         </div>
                         <div class="post-content">Tìm ngôi sao chụp lookbook mới!</div>
-                        <p> Mấy bà ơi nhà meimei cần mẫu quay LOOKBOOK có mấy mẫu siêu hót luôn nè 😘! Đảm bảo siêu mê bà nào đồng ý làm mẫu bên tui làm miễn phí trả case luôn cũng chịu nha , ib xem mẫu nhé mấy bà ♥️!</p>
+                        <p>Mấy bà ơi nhà meimei cần mẫu quay LOOKBOOK có mấy mẫu siêu hót luôn nè 😘! Đảm bảo siêu mê bà nào đồng ý làm mẫu bên tui làm miễn phí trả case luôn cũng chịu nha, ib xem mẫu nhé mấy bà ♥️!</p>
                         <div class="image-gallery">
                             <img src="https://imgur.com/MLMjl3Y.jpg" alt="Livestream 1">
                             <img src="https://imgur.com/Smaexod.jpg" alt="Livestream 2">
@@ -922,22 +918,19 @@
                             <img src="https://imgur.com/NZFXea4.jpg" alt="Livestream 3">
                         </div>
                         <div class="like-info">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/6UHmJipH8-J.png" alt="Haha">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/EhyW6biK10i.png" alt="Love">
                             <img src="https://i.imgur.com/GT3OXZP.jpg" class="avatar" alt="User Avatar">
                             <img src="https://i.imgur.com/7eRH4Fr.jpg" class="avatar" alt="User Avatar">
-                            <span>Meimeistudio và 7.2k người khác</span>
+                            <span>Minh Tuấn, Hương Trà và 7.2k người khác</span>
                         </div>
                         <div class="actions">
                             <div class="action like" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like"> Thích <span>7.2k</span>
+                                <i class="fas fa-thumbs-up"></i> Thích <span>7.2k</span>
                             </div>
                             <div class="action comment" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/a2B8aH2zWrc.png" alt="Comment"> Bình luận <span>3k8</span>
+                                <i class="fas fa-comment"></i> Bình luận <span>3k8</span>
                             </div>
                             <div class="action share" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/0--2A9QseKL.png" alt="Share"> Chia sẻ <span>2k4</span>
+                                <i class="fas fa-share"></i> Chia sẻ <span>2k4</span>
                             </div>
                         </div>
                         <div class="comments">
@@ -958,7 +951,7 @@
                             </div>
                         </div>
                         <div class="post-content">Kêu gọi mẫu ảnh sản phẩm mới!</div>
-                        <p> Bà nào thích mẫu concep nào hót ib tui làm một bộ nhé hứa làm miễn phí nè♥️ Nhiều mẫu hót mà đẹp quá bà nào muốn ib tui liền nha 😘 !</p>
+                        <p>Bà nào thích mẫu concep nào hót ib tui làm một bộ nhé hứa làm miễn phí nè♥️ Nhiều mẫu hót mà đẹp quá bà nào muốn ib tui liền nha 😘!</p>
                         <div class="image-gallery">
                             <img src="https://imgur.com/7eRH4Fr.jpg" alt="Tuyển mẫu 1">
                             <img src="https://imgur.com/mj7UTEK.jpg" alt="Tuyển mẫu 2">
@@ -966,22 +959,19 @@
                             <img src="https://imgur.com/GT3OXZP.jpg" alt="Tuyển mẫu 4">
                         </div>
                         <div class="like-info">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/6UHmJipH8-J.png" alt="Haha">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/EhyW6biK10i.png" alt="Love">
                             <img src="https://i.imgur.com/7eRH4Fr.jpg" class="avatar" alt="User Avatar">
                             <img src="https://i.imgur.com/mj7UTEK.jpg" class="avatar" alt="User Avatar">
-                            <span>Meimeistudio và 7k người khác</span>
+                            <span>Hương Trà, Thu Hà và 7k người khác</span>
                         </div>
                         <div class="actions">
                             <div class="action like" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like"> Thích <span>7k</span>
+                                <i class="fas fa-thumbs-up"></i> Thích <span>7k</span>
                             </div>
                             <div class="action comment" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/a2B8aH2zWrc.png" alt="Comment"> Bình luận <span>1k3</span>
+                                <i class="fas fa-comment"></i> Bình luận <span>1k3</span>
                             </div>
                             <div class="action share" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/0--2A9QseKL.png" alt="Share"> Chia sẻ <span>1k4</span>
+                                <i class="fas fa-share"></i> Chia sẻ <span>1k4</span>
                             </div>
                         </div>
                         <div class="comments">
@@ -1013,22 +1003,19 @@
                             </div>
                         </div>
                         <div class="like-info">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/6UHmJipH8-J.png" alt="Haha">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/EhyW6biK10i.png" alt="Love">
                             <img src="https://i.imgur.com/mj7UTEK.jpg" class="avatar" alt="User Avatar">
                             <img src="https://i.imgur.com/x7Z7Evf.jpg" class="avatar" alt="User Avatar">
-                            <span>Meimeistudio và 8k người khác</span>
+                            <span>Thu Hà, Linh Nguyễn và 8k người khác</span>
                         </div>
                         <div class="actions">
                             <div class="action like" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/1FDa2tDB3Pp.png" alt="Like"> Thích <span>8k</span>
+                                <i class="fas fa-thumbs-up"></i> Thích <span>8k</span>
                             </div>
                             <div class="action comment" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/a2B8aH2zWrc.png" alt="Comment"> Bình luận <span>1k7</span>
+                                <i class="fas fa-comment"></i> Bình luận <span>1k7</span>
                             </div>
                             <div class="action share" onclick="showLoginPopup()">
-                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/0--2A9QseKL.png" alt="Share"> Chia sẻ <span>754</span>
+                                <i class="fas fa-share"></i> Chia sẻ <span>754</span>
                             </div>
                         </div>
                         <div class="comments">
@@ -1041,20 +1028,28 @@
                 <div id="about-tab" class="intro-section about-section tab-content">
                     <p><strong>Giới thiệu</strong></p>
                     <div class="item">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/4r5pN3v2aN5.png" alt="Page" class="icon">
+                        <i class="fas fa-camera"></i>
                         <span>Studio chụp ảnh</span>
                     </div>
                     <div class="item">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/5uH7TXzWENM.png" alt="Website" class="icon">
-                        <span><a href="https://www.tiktok.com/@meimeimodel_vision">tiktok.com/@meimeimodel_vision</a></span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>424 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</span>
                     </div>
                     <div class="item">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/6zYk4cJJeL8.png" alt="Email" class="icon">
+                        <i class="fas fa-envelope"></i>
                         <span>contact@meimeistudio.vn</span>
                     </div>
                     <div class="item">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/5hM-k1AN4eS.png" alt="Location" class="icon">
-                        <span>424 Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh</span>
+                        <i class="fas fa-globe"></i>
+                        <span><a href="https://www.tiktok.com/@meimeimodel_vision">tiktok.com/@meimeimodel_vision</a></span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mở cửa: 9:00 - 21:00</span>
+                    </div>
+                    <div class="item">
+                        <i class="fab fa-instagram"></i>
+                        <span><a href="https://instagram.com/meimeistudio">instagram.com/meimeistudio</a></span>
                     </div>
                 </div>
 
